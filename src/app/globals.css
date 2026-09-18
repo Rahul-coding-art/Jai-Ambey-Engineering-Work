@@ -148,3 +148,47 @@ img {
     letter-spacing: -1px;
   }
 }
+
+
+/* =========================
+   DESKTOP DROPDOWN
+   ========================= */
+
+@media (min-width: 992px) {
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+
+  .navbar .dropdown:hover .dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
+
+  /* Don't need click behavior on desktop */
+  .navbar .dropdown .dropdown-toggle {
+    cursor: pointer;
+  }
+}
+
+
+/* =========================
+   MOBILE DROPDOWN
+   ========================= */
+
+@media (max-width: 991.98px) {
+  .navbar .dropdown-menu {
+    position: static;
+    margin: 0;
+  }
+
+  .navbar .dropdown-menu.show {
+    display: block;
+  }
+
+  .navbar .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    border: 0;
+    background: transparent;
+  }
+}

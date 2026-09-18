@@ -1,0 +1,342 @@
+/* =========================
+   HEADER / NAVBAR
+========================= */
+
+.siteHeader {
+  position: relative;
+  z-index: 1050;
+}
+
+.customNavbar {
+  min-height: 78px;
+  padding: 8px 0;
+  background: #fff !important;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+
+.navbarContainer {
+  min-height: 62px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.logo img {
+  width: 180px;
+  height: 60px;
+  object-fit: contain;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+  align-items: center;
+  gap: 8px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  position: relative;
+
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 16px !important;
+
+  color: #222 !important;
+  background: transparent;
+
+  border: 0;
+
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.navLink:hover {
+  color: #e21b23 !important;
+}
+
+
+/* Animated underline */
+
+.navLink:not(.dropdownToggle)::before {
+  content: "";
+
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 5px;
+
+  height: 2px;
+
+  background: #e21b23;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+.navLink:not(.dropdownToggle):hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =========================
+   PRODUCTS DROPDOWN
+========================= */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownToggle {
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  min-width: 230px;
+
+
+  padding: 8px;
+
+  background: #fff;
+
+  border: 1px solid #eee;
+  border-radius: 10px;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.dropdownItem {
+  padding: 11px 14px;
+
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+
+  border-radius: 6px;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.dropdownItem:hover {
+  color: #e21b23;
+  background: #fff3f3;
+
+  padding-left: 18px;
+}
+
+
+/* =========================
+   MOBILE TOGGLER
+========================= */
+
+.toggler {
+  padding: 8px 10px;
+
+  border: 1px solid #ddd !important;
+  border-radius: 7px;
+
+  box-shadow: none !important;
+}
+
+.toggler:focus {
+  box-shadow: 0 0 0 3px rgba(226, 27, 35, 0.12) !important;
+}
+
+
+/* =========================
+   OFFCANVAS
+========================= */
+
+.offcanvas {
+  background: #fff;
+}
+
+.offcanvasHeader {
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.offcanvasTitle {
+  margin: 0;
+}
+
+.offcanvasTitle img {
+  width: 150px;
+  height: auto;
+}
+
+.close {
+  box-shadow: none !important;
+}
+
+.offcanvasBody {
+  padding: 20px;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 992px) {
+  .offcanvas {
+    position: static !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    visibility: visible !important;
+    transform: none !important;
+
+    background: transparent;
+  }
+
+  .offcanvasHeader {
+    display: none;
+  }
+
+  .offcanvasBody {
+    display: flex;
+    align-items: center;
+
+    padding: 0;
+  }
+
+  .nav {
+    margin: 0;
+  }
+
+  .dropdownMenu {
+    display: none;
+  }
+
+  .dropdownMenu.show {
+    display: block;
+  }
+}
+
+
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 991.98px) {
+  .customNavbar {
+    min-height: 70px;
+  }
+
+  .logo img {
+    width: 150px;
+    height: auto;
+  }
+
+  .offcanvas {
+   
+    max-width: 100%;
+  }
+
+  .nav {
+    align-items: stretch;
+
+    gap: 2px;
+  }
+
+  .navItem {
+    width: 100%;
+  }
+
+  .navLink {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    padding: 13px 10px !important;
+
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .navLink:not(.dropdownToggle)::before {
+    display: none;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdownToggle {
+    justify-content: space-between;
+  }
+
+  .dropdownMenu {
+    position: static !important;
+
+    width: 100%;
+
+    margin: 4px 0 8px !important;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #f8f8f8;
+
+    box-shadow: none;
+  }
+
+  .dropdownItem {
+    padding: 11px 15px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 575.98px) {
+  .customNavbar {
+    padding: 5px 0;
+  }
+
+  .logo img {
+    width: 135px;
+  }
+
+ 
+
+  .offcanvasHeader {
+    padding: 15px;
+  }
+
+  .offcanvasBody {
+    padding: 15px;
+  }
+}
