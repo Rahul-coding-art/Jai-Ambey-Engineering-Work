@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./Header.module.css";
+import { products } from "@/config/navigation";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -131,75 +132,21 @@ export default function Header() {
                       dropdownOpen ? "show" : ""
                     }`}
                   >
-                    <li>
-                      <Link
-                        className={`dropdown-item ${styles.dropdownItem}`}
-                        href="/plastic-moulding-die"
-                        onClick={closeMenu}
-                      >
-                        Plastic Moulding Die
-                      </Link>
-                    </li>
 
-                    <li>
+                    {products.map((product)=>(
+ <li key={product.name}>
                       <Link
                         className={`dropdown-item ${styles.dropdownItem}`}
-                        href="/die-moulds"
+                        href={product.href}
                         onClick={closeMenu}
                       >
-                        Die Moulds
+                        {product.name}
                       </Link>
                     </li>
+                    ))}
+                   
 
-                    <li>
-                      <Link
-                        className={`dropdown-item ${styles.dropdownItem}`}
-                        href="/injection-mould"
-                        onClick={closeMenu}
-                      >
-                        Injection Mould
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link
-                        className={`dropdown-item ${styles.dropdownItem}`}
-                        href="/blow-mould"
-                        onClick={closeMenu}
-                      >
-                        Blow Mould
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link
-                        className={`dropdown-item ${styles.dropdownItem}`}
-                        href="/bottle-cap-die"
-                        onClick={closeMenu}
-                      >
-                        Bottle Cap Die
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link
-                        className={`dropdown-item ${styles.dropdownItem}`}
-                        href="/handle-die"
-                        onClick={closeMenu}
-                      >
-                        Handle Die
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link
-                        className={`dropdown-item ${styles.dropdownItem}`}
-                        href="/cap-die"
-                        onClick={closeMenu}
-                      >
-                        Cap Die
-                      </Link>
-                    </li>
+                  
                   </ul>
                 </li>
 
