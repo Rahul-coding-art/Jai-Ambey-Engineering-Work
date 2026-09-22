@@ -1,0 +1,207 @@
+.productsSection {
+  background: #061a2a;
+  padding: 80px 0;
+  color: #fff;
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+
+  color: #ff8a00;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 22px;
+
+  color: #fff;
+
+  font-size: 2rem;
+  line-height: 1.12;
+  font-weight: 700;
+}
+
+.description {
+  margin-bottom: 30px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.viewAllButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 12px 18px;
+
+  border: 1px solid #ff8a00;
+  border-radius: 6px;
+
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.viewAllButton:hover {
+  background: #ff8a00;
+  color: #fff;
+}
+
+.arrow {
+  font-size: 21px;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.productCard {
+  display: block;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 7px;
+
+  background: #09243a;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-4px);
+
+  border-color: #ff8a00;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 1.55 / 1;
+
+  overflow: hidden;
+
+  background: #fff;
+}
+
+.productImage {
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.productCard:hover .productImage {
+  transform: scale(1.05);
+}
+
+/* =========================
+   CARD FOOTER
+========================= */
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 52px;
+
+  padding: 9px 12px;
+
+  background: #092b45;
+}
+
+.cardFooter h3 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.cardArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 27px;
+  height: 27px;
+
+  border-radius: 50%;
+
+  background: #ff8a00;
+
+  color: #fff;
+
+  font-size: 18px;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover .cardArrow {
+  transform: translateX(3px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 991px) {
+  .productsSection {
+    padding: 65px 0;
+  }
+
+  .intro {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .productsSection {
+    padding: 55px 0;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+}
