@@ -4,6 +4,7 @@ import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
 import TrustHighlights from "@/components/TrustHighlights/TrustHighlights";
 import ProductsSection from "@/components/ProductsSection/ProductsSection";
+import AboutPreview from "@/components/AboutPreview/AboutPreview";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero/>
         <TrustHighlights/>
         <ProductsSection/>
+        <AboutPreview/>
        <h1>
         Hello
        </h1>

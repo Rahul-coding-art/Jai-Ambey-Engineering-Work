@@ -1,0 +1,419 @@
+.aboutSection {
+  position: relative;
+
+  background: #f5f6f7;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+
+  overflow: hidden;
+
+  background: #15181c;
+}
+
+.aboutImage {
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.imageWrapper:hover .aboutImage {
+  transform: scale(1.03);
+}
+
+.imageOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 12, 18, 0.05),
+      rgba(5, 12, 18, 0.2)
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   IMAGE LABEL
+========================================= */
+
+.imageLabel {
+  position: absolute;
+
+  left: 30px;
+  bottom: 30px;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding: 16px 20px;
+
+  background: rgba(7, 18, 29, 0.92);
+
+  border-left: 3px solid #f28c28;
+}
+
+.imageLabel span {
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.imageLabel strong {
+  color: #f28c28;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 18px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.aboutContent {
+  max-width: 850px;
+
+  padding: 90px 8% 90px 7%;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.sectionLabel {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #f28c28;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.title {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #071a2b;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(36px, 4vw, 52px);
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* =========================================
+   ORANGE LINE
+========================================= */
+
+.orangeLine {
+  width: 55px;
+  height: 3px;
+
+  margin: 25px 0;
+
+  background: #f28c28;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+  max-width: 680px;
+
+  margin: 0 0 15px;
+
+  color: #5f6973;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   HIGHLIGHTS
+========================================= */
+
+.highlights {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 35px;
+
+  border-top: 1px solid #dfe3e6;
+  border-bottom: 1px solid #dfe3e6;
+}
+
+
+.highlight {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-height: 80px;
+
+  padding: 15px 20px;
+
+  border-right: 1px solid #dfe3e6;
+}
+
+.highlight:first-child {
+  padding-left: 0;
+}
+
+.highlight:last-child {
+  border-right: 0;
+}
+
+
+.icon {
+  flex: 0 0 auto;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  background: #fff1e4;
+
+  color: #f28c28;
+
+  font-size: 18px;
+}
+
+
+.highlight h3 {
+  margin: 0;
+
+  color: #071a2b;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+.highlight p {
+  margin: 3px 0 0;
+
+  color: #69737d;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.aboutButton {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 32px;
+
+  padding: 13px 21px;
+
+  border: 1px solid #f28c28;
+
+  color: #071a2b;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.aboutButton i {
+  color: #f28c28;
+
+  transition: transform 0.3s ease;
+}
+
+.aboutButton:hover {
+  background: #f28c28;
+
+  color: #071a2b;
+
+  transform: translateY(-3px);
+}
+
+.aboutButton:hover i {
+  color: #071a2b;
+
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media (max-width: 1199.98px) {
+  .aboutContent {
+    padding: 70px 5% 70px 6%;
+  }
+
+  .highlight {
+    padding: 15px 12px;
+
+    gap: 8px;
+  }
+
+  .highlight h3 {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+  .imageWrapper {
+    min-height: 450px;
+  }
+
+  .aboutContent {
+    max-width: 100%;
+
+    padding: 70px 30px;
+  }
+
+  .highlights {
+    margin-top: 30px;
+  }
+
+  .highlight:first-child {
+    padding-left: 15px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767.98px) {
+  .imageWrapper {
+    min-height: 360px;
+  }
+
+  .imageLabel {
+    left: 20px;
+    bottom: 20px;
+
+    padding: 13px 16px;
+  }
+
+  .imageLabel span {
+    font-size: 8px;
+  }
+
+  .imageLabel strong {
+    font-size: 16px;
+  }
+
+  .aboutContent {
+    padding: 55px 20px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight,
+  .highlight:first-child {
+    min-height: 70px;
+
+    padding: 13px 0;
+
+    border-right: 0;
+    border-bottom: 1px solid #dfe3e6;
+  }
+
+  .highlight:last-child {
+    border-bottom: 0;
+  }
+}
