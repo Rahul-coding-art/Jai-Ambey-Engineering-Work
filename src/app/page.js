@@ -5,6 +5,7 @@ import Hero from "@/components/Hero/Hero";
 import TrustHighlights from "@/components/TrustHighlights/TrustHighlights";
 import ProductsSection from "@/components/ProductsSection/ProductsSection";
 import AboutPreview from "@/components/AboutPreview/AboutPreview";
+import ClientSection from "@/components/ClientSection/ClientSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <TrustHighlights/>
         <ProductsSection/>
         <AboutPreview/>
+        <ClientSection/>
        <h1>
         Hello
        </h1>
