@@ -6,6 +6,7 @@ import TrustHighlights from "@/components/TrustHighlights/TrustHighlights";
 import ProductsSection from "@/components/ProductsSection/ProductsSection";
 import AboutPreview from "@/components/AboutPreview/AboutPreview";
 import ClientSection from "@/components/ClientSection/ClientSection";
+import GalleryPreview from "@/components/GalleryPreview/GalleryPreview";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <ProductsSection/>
         <AboutPreview/>
         <ClientSection/>
+        <GalleryPreview/>
        <h1>
         Hello
        </h1>
